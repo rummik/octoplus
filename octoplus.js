@@ -12,6 +12,10 @@ console.log('OCTOPLUS POWERS...ACTIVATE!');
 var stargazers = {};
 $('.js-discussion .js-comment-container').each(function() {
 	var $this = $(this);
+	var $comment = $this.find('.js-comment-body');
+
+	if (/^\s*\+\d\s*$/.test($comment.text()))
+		$this.addClass('octoplus-hidden');
 
 	if ($this.find('img[alt=":+1:"], img[alt=":thumbsup:"]').length || /\W\+\d\W/.test($this.text())) {
 		var $avatar = $this.find('.js-avatar');
