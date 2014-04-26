@@ -1,0 +1,17 @@
+.sidebar-stargazing .thread-stargazing-status .minibutton {
+	display: block;
+	width: 100%;
+}
+
+.sidebar-stargazing .thread-stargazing-status .reason {
+	padding: 0;
+	margin: 5px 0 0;
+}
+
+.timeline-comment-wrapper.octoplus-hidden {
+	height: 0;
+	overflow: hidden;
+	margin-top: 0;
+	margin-bottom: -15px;
+	border: 0;
+}

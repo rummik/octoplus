@@ -1,0 +1,25 @@
+{
+	"name": "Octoplus",
+	"version": "0.0.0",
+	"description": "Tallies +1's and :thumbsup: on GitHub issues and pull requests",
+
+	"manifest_version": 2,
+
+	"content_scripts": [
+		{
+			"matches": [
+				"https://github.com/*/*/issues/*",
+				"https://github.com/*/*/pull/*"
+			],
+
+			"css": ["octoplus.css"],
+
+			"js": [
+				"zepto.min.js",
+				"octoplus.js"
+			],
+
+			"run_at": "document_end"
+		}
+	]
+}
