@@ -56,17 +56,26 @@ var $facebox = $stargazers.find('.facebox-user-list');
 Object.keys(stargazers).forEach(function(name, n) {
 	var stargazer = stargazers[name];
 
+	var avatar = '<img alt="' + stargazer.displayname + '" ' +
+			'class="avatar js-avatar" ' +
+			'data-user="' + stargazer.id + '" ' +
+			'src="' + stargazer.avatar + '" ' +
+			'height="20" width="20" />';
+
 	$facebox.append($(
 		'<li class="facebox-user-list-item">' +
-			'<img alt="' + stargazer.displayname + '" class=" js-avatar" data-user="' + stargazer.id + '" height="24" src="' + stargazer.avatar + '" width="24" />' +
+			avatar.replace(/avatar /, '').replace(/(height|width)="20"/g, '$1="24"') +
 			'<a href="' + stargazer.url + '">' + stargazer.username + '</a>' +
 		'</li>'
 	));
 
 	if (n < 20) {
 		$avatars.append($(
-			'<a class="participant-avatar tooltipped tooltipped-s" aria-label="' + stargazer.username + '" href="' + stargazer.url + '">' +
-				'<img alt="' + stargazer.displayname + '" class="avatar js-avatar" data-user="' + stargazer.id + '" height="20" src="' + stargazer.avatar + '" width="20" />' +
+			'<a class="participant-avatar tooltipped tooltipped-s" ' +
+			  'aria-label="' + stargazer.username + '" ' +
+			  'href="' + stargazer.url + '">' +
+
+				avatar +
 			'</a>'
 		));
 	}
