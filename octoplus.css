@@ -11,7 +11,14 @@
 .timeline-comment-wrapper.octoplus-hidden {
 	height: 0;
 	overflow: hidden;
-	margin-top: 0;
-	margin-bottom: -15px;
+	margin-top: -15px;
+	margin-bottom: 0;
 	border: 0;
 }
+	.octoplus-hidden + .octoplus-hidden {
+		margin-top: 0;
+	}
+
+	.octoplus-hidden + #js-timeline-marker {
+		margin-top: 15px;
+	}

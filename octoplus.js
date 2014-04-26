@@ -14,7 +14,7 @@ $('.js-discussion .js-comment-container').each(function() {
 	var $this = $(this);
 	var $comment = $this.find('.js-comment-body');
 
-	if (/^\s*\+\d\s*$/.test($comment.text()))
+	if ((/^\s*$/.test($comment.text()) && $comment.find('p:only-child').find('img[alt=":+1:"]:only-child, img[alt=":thumbsup:"]:only-child').length) || /^\s*\+\d\s*$/.test($comment.text()))
 		$this.addClass('octoplus-hidden');
 
 	if ($this.find('img[alt=":+1:"], img[alt=":thumbsup:"]').length || /\W\+\d\W/.test($this.text())) {
