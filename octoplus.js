@@ -3,7 +3,7 @@
 
 var $notifications = $('.discussion-sidebar-item.sidebar-notifications');
 
-if (!$notifications)
+if (!$notifications.length)
 	return false;
 
 console.log('OCTOPLUS POWERS...ACTIVATE!');
