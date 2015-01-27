@@ -18,7 +18,7 @@ $('.js-discussion .js-comment-container').each(function() {
 		$this.addClass('octoplus-hidden');
 
 	if ($this.find('img[alt=":+1:"], img[alt=":thumbsup:"]').length || /\W\+\d\W/.test($this.text())) {
-		var $avatar = $this.find('.js-avatar');
+		var $avatar = $this.find('.timeline-comment-avatar');
 		var name = $this.find('.author').text();
 
 		stargazers[name] = {
