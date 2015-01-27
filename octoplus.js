@@ -73,7 +73,7 @@ Object.keys(stargazers).forEach(function(name, n) {
 		'</li>'
 	));
 
-	if (n < 20) {
+	if (n < 24) {
 		$avatars.append($(
 			'<a class="participant-avatar tooltipped tooltipped-s" ' +
 			  'aria-label="' + stargazer.username + '" ' +
@@ -86,7 +86,7 @@ Object.keys(stargazers).forEach(function(name, n) {
 });
 
 if (Object.keys(stargazers).length > 20)
-	$avatars.append('<a class="participation-more" href="#pr_stargazers_box" rel="facebox">...</a>');
+	$avatars.append('<a class="participation-more" href="#pr_stargazers_box" rel="facebox">and others</a>');
 
 
 
